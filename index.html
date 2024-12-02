@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIKINGS TV KODI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>VIKINGS TV KODI</h1>
+    <div class="video-grid">
+      <!-- Card com ícone e nome -->
+      <div class="video-card" data-video="https://player.odycdn.com/v6/streams/53ab5033aedf0263dac3067228725df30567dd01/a95fbb.mp4">
+        <img src="icons/oneplay.png" alt="ONEPLAY" class="addon-icon">
+        <p>ONEPLAY</p>
+      </div>
+      <div class="video-card" data-video="video2.mp4">
+        <img src="icone2.png" alt="Addon 2" class="addon-icon">
+        <p>Addon 2</p>
+      </div>
+      <!-- Adicione mais cards conforme necessário -->
+    </div>
+  </div>
+
+  <!-- Pop-up do vídeo -->
+<!-- Estrutura do pop-up -->
+<div id="video-popup" class="popup", style="display: none;">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <video id="video-player" controls>
+      <source src="" type="video/mp4">
+      Seu navegador não suporta o player de vídeo.
+    </video>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

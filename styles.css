@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px); /* Ajusta para 4 cartões lado a lado com 150px cada */
+  gap: 0; /* Remove o espaçamento entre os cartões */
+  justify-content: center; /* Centraliza os cartões */
+}
+
+.video-card {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 160px; /* Ajuste a largura aqui */
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.addon-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.popup {
+  display: none; /* O pop-up está invisível ao carregar a página */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; /* Flexbox para centralizar */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
