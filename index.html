@@ -19,23 +19,29 @@
         <img src="icons/oneplay.png" alt="ONEPLAY" class="addon-icon">
         <p>ONEPLAY</p>
       </div>
-      <div class="video-card" data-video="video2.mp4">
-        <img src="icone2.png" alt="Addon 2" class="addon-icon">
-        <p>Addon 2</p>
+      <div class="video-card" data-video="https://www.youtube-nocookie.com/embed/6BjJlL6c0pA?playlist=6BjJlL6c0pA&autoplay=1&iv_load_policy=3&loop=1&start=">
+        <img src="icons/brazuca.png" alt="BRAZUCA PLAY" class="addon-icon">
+        <p>BRAZUCA PLAY</p>
       </div>
       <!-- Adicione mais cards conforme necessário -->
     </div>
   </div>
 
-  <!-- Pop-up do vídeo -->
-<!-- Estrutura do pop-up -->
-<div id="video-popup" class="popup", style="display: none;">
+<!-- Pop-up do vídeo -->
+<div id="video-popup" class="popup" style="display: none;">
   <div class="popup-content">
     <span class="close-btn">&times;</span>
-    <video id="video-player" controls>
-      <source src="" type="video/mp4">
-      Seu navegador não suporta o player de vídeo.
-    </video>
+    <!-- Contêiner do player de vídeo (MP4) -->
+    <div id="video-container">
+      <video id="video-player" controls>
+        <source src="" type="video/mp4">
+        Seu navegador não suporta o player de vídeo.
+      </video>
+    </div>
+    <!-- Contêiner do iframe do YouTube -->
+    <div id="youtube-container" style="display: none;">
+      <iframe id="video-iframe" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
