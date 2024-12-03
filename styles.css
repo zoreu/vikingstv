@@ -1,4 +1,5 @@
 /* styles.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,17 +7,29 @@ body {
   background-color: #f4f4f9;
   color: #333;
   text-align: center;
+  height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  margin-top: -14%;
 }
 
 .container {
   padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinha os elementos na coluna */
+  justify-content: center; /* Centraliza os itens dentro da container */
+  align-items: center; /* Garante que o conteúdo dentro da container esteja centralizado */
+  width: 100%; /* Garante que a largura da container seja de 100% */
+  max-width: 1200px; /* Limita a largura máxima */
 }
 
 .video-grid {
   display: grid;
   grid-template-columns: repeat(4, 200px); /* Ajusta para 4 cartões lado a lado com 150px cada */
-  gap: 0; /* Remove o espaçamento entre os cartões */
+  gap: 20px; /* Adiciona espaço entre os cartões */
   justify-content: center; /* Centraliza os cartões */
+  margin: 0 auto; /* Garante que a grid esteja centralizada */
 }
 
 .video-card {
@@ -75,4 +88,26 @@ video {
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduz para 2 cartões por linha */
+    gap: 15px;
+  }
+
+  .video-card {
+    width: 140px; /* Ajusta a largura dos cartões no mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* 1 cartão por linha em telas menores */
+  }
+
+  .video-card {
+    width: 100%; /* Os cartões ocupam toda a largura disponível no mobile */
+  }
 }
